@@ -1,0 +1,5 @@
+python-dotenv
+requests
+azure-identity
+azure-ai-projects==1.1.0b4
+
