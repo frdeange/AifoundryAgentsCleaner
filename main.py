@@ -10,11 +10,11 @@ ENDPOINT = os.getenv("AI_FOUNDRY_ENDPOINT")
 def delete_all_agents(project_client: AIProjectClient):
     print("Listing agents...")
     is_empty = True
-    agents_list = project_client.agents.list()
+    agents_list = project_client.agents.list_agents()
     for agent in agents_list:
         is_empty = False
         print(f"Deleting agent: {agent.id} ({agent.name})")
-        project_client.agents.delete(agent.id)
+        project_client.agents.delete_agent(agent.id)
     if is_empty:
         print("No agents found.")
 
